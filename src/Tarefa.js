@@ -13,7 +13,12 @@ export default function Tarefas( { tarefa, despacho } ) {
                     id: tarefa.id
                 }
             })}>Completa</button>
-            <button>Apagar</button>
+            <button onClick={() => despacho({
+                type: ACTIONS.DELETE_TODO,
+                payload: {
+                    id: tarefa.id
+                }
+            })}>Apagar</button>
         </div>
     )
 }
